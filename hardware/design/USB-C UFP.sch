@@ -1,0 +1,421 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:mrk-industries
+LIBS:mainboard-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L TUSB320 U201
+U 1 1 55D3C9C8
+P 2700 4000
+F 0 "U201" H 2550 4500 60  0000 C CNN
+F 1 "TUSB320" H 3100 3450 60  0000 C CNN
+F 2 "Mrk Industries:X2QFN-12" H 2700 3900 60  0001 C CNN
+F 3 "" H 2700 3900 60  0000 C CNN
+F 4 "TUSB320IRWBR" H 2650 4600 60  0001 C CNN "mfg#"
+	1    2700 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR202
+U 1 1 55D3CA19
+P 2700 4750
+F 0 "#PWR202" H 2700 4500 50  0001 C CNN
+F 1 "GND" H 2700 4600 50  0000 C CNN
+F 2 "" H 2700 4750 60  0000 C CNN
+F 3 "" H 2700 4750 60  0000 C CNN
+	1    2700 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 4650 2700 4750
+Wire Wire Line
+	2600 4700 2800 4700
+Wire Wire Line
+	2600 4700 2600 4650
+Connection ~ 2700 4700
+Wire Wire Line
+	2800 4700 2800 4650
+Text HLabel 1950 4150 0    60   Input ~ 0
+SCL
+Text HLabel 1950 4300 0    60   Input ~ 0
+SDA
+Text Notes 1150 4300 0    60   ~ 0
+remember\ni2c pullups
+$Comp
+L C C201
+U 1 1 55D3CA6E
+P 3000 3050
+F 0 "C201" H 3025 3150 50  0000 L CNN
+F 1 "100nF" H 3025 2950 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 3038 2900 30  0001 C CNN
+F 3 "" H 3000 3050 60  0000 C CNN
+	1    3000 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 3350 2700 2850
+Wire Wire Line
+	2700 2850 3450 2850
+Wire Wire Line
+	3000 2850 3000 2900
+Text GLabel 2700 2850 0    60   Input ~ 0
+3.3v
+$Comp
+L GND #PWR203
+U 1 1 55D3CACC
+P 3000 3200
+F 0 "#PWR203" H 3000 2950 50  0001 C CNN
+F 1 "GND" H 3000 3050 50  0000 C CNN
+F 2 "" H 3000 3200 60  0000 C CNN
+F 3 "" H 3000 3200 60  0000 C CNN
+	1    3000 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R203
+U 1 1 55D3CAF7
+P 1650 3400
+F 0 "R203" V 1730 3400 50  0000 C CNN
+F 1 "200k" V 1650 3400 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 1580 3400 30  0001 C CNN
+F 3 "" H 1650 3400 30  0000 C CNN
+	1    1650 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R202
+U 1 1 55D3CBB4
+P 1300 3400
+F 0 "R202" V 1380 3400 50  0000 C CNN
+F 1 "200k" V 1300 3400 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 1230 3400 30  0001 C CNN
+F 3 "" H 1300 3400 30  0000 C CNN
+	1    1300 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 3850 1950 3850
+Wire Wire Line
+	1650 3850 1650 3550
+Wire Wire Line
+	1950 4000 1300 4000
+Wire Wire Line
+	1300 4000 1300 3550
+Text HLabel 1600 3850 0    60   Input ~ 0
+INT
+Connection ~ 1650 3850
+Text GLabel 1200 3100 0    60   Input ~ 0
+3.3v
+Wire Wire Line
+	1200 3100 1650 3100
+Wire Wire Line
+	1300 3100 1300 3250
+Wire Wire Line
+	1650 3100 1650 3250
+Connection ~ 1300 3100
+$Comp
+L R R201
+U 1 1 55D3CCA3
+P 900 3900
+F 0 "R201" V 980 3900 50  0000 C CNN
+F 1 "4.7k" V 900 3900 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 830 3900 30  0001 C CNN
+F 3 "" H 900 3900 30  0000 C CNN
+	1    900  3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 3700 900  3700
+Wire Wire Line
+	900  3700 900  3750
+$Comp
+L GND #PWR201
+U 1 1 55D3CD00
+P 900 4050
+F 0 "#PWR201" H 900 3800 50  0001 C CNN
+F 1 "GND" H 900 3900 50  0000 C CNN
+F 2 "" H 900 4050 60  0000 C CNN
+F 3 "" H 900 4050 60  0000 C CNN
+	1    900  4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R204
+U 1 1 55D3CD76
+P 3700 3700
+F 0 "R204" V 3780 3700 50  0000 C CNN
+F 1 "900k" V 3700 3700 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3630 3700 30  0001 C CNN
+F 3 "" H 3700 3700 30  0000 C CNN
+	1    3700 3700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3550 3700 3400 3700
+Text HLabel 4000 3700 2    60   Input ~ 0
+VBUS
+Wire Wire Line
+	4000 3700 3850 3700
+Wire Wire Line
+	3400 3850 5100 3850
+Wire Wire Line
+	3400 4000 4250 4000
+$Comp
+L D_Schottky D201
+U 1 1 55D3D3AB
+P 3600 2850
+F 0 "D201" H 3600 2950 50  0000 C CNN
+F 1 "Not Installed" H 3600 2750 50  0000 C CNN
+F 2 "Diodes_SMD:SOD-323" H 3600 2850 60  0001 C CNN
+F 3 "" H 3600 2850 60  0000 C CNN
+	1    3600 2850
+	1    0    0    -1  
+$EndComp
+Text HLabel 4050 2850 2    60   Input ~ 0
+VBUS
+Wire Wire Line
+	4050 2850 3750 2850
+Connection ~ 3000 2850
+$Comp
+L C C202
+U 1 1 55D3D576
+P 9950 4050
+F 0 "C202" H 9975 4150 50  0000 L CNN
+F 1 "100nF" H 9975 3950 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 9988 3900 30  0001 C CNN
+F 3 "" H 9950 4050 60  0000 C CNN
+	1    9950 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR211
+U 1 1 55D3D612
+P 9950 4200
+F 0 "#PWR211" H 9950 3950 50  0001 C CNN
+F 1 "GND" H 9950 4050 50  0000 C CNN
+F 2 "" H 9950 4200 60  0000 C CNN
+F 3 "" H 9950 4200 60  0000 C CNN
+	1    9950 4200
+	1    0    0    -1  
+$EndComp
+Text HLabel 10000 3800 2    60   Input ~ 0
+VBUS
+Wire Wire Line
+	10000 3800 9950 3800
+Wire Wire Line
+	9950 3800 9950 3900
+$Comp
+L USB-C P201
+U 1 1 55D3E786
+P 8550 4000
+F 0 "P201" H 8550 4700 60  0000 C CNN
+F 1 "USB-C" H 8800 3300 60  0000 C CNN
+F 2 "Mrk Industries:USB-C-DX07S" H 8450 4600 60  0001 C CNN
+F 3 "" H 8550 4000 60  0000 C CNN
+F 4 "DX07S024JJ2R1300" H 8650 4800 60  0001 C CNN "mfg#"
+	1    8550 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR207
+U 1 1 55D3FF3B
+P 7850 4550
+F 0 "#PWR207" H 7850 4300 50  0001 C CNN
+F 1 "GND" H 7850 4400 50  0000 C CNN
+F 2 "" H 7850 4550 60  0000 C CNN
+F 3 "" H 7850 4550 60  0000 C CNN
+	1    7850 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR209
+U 1 1 55D3FF95
+P 9250 4550
+F 0 "#PWR209" H 9250 4300 50  0001 C CNN
+F 1 "GND" H 9250 4400 50  0000 C CNN
+F 2 "" H 9250 4550 60  0000 C CNN
+F 3 "" H 9250 4550 60  0000 C CNN
+	1    9250 4550
+	1    0    0    -1  
+$EndComp
+NoConn ~ 7850 4450
+NoConn ~ 7850 4350
+NoConn ~ 9250 4450
+NoConn ~ 9250 4350
+NoConn ~ 9250 3850
+NoConn ~ 7850 4150
+NoConn ~ 7850 3650
+NoConn ~ 7850 3550
+NoConn ~ 9250 3650
+NoConn ~ 9250 3550
+$Comp
+L GND #PWR210
+U 1 1 55D4007C
+P 9400 3450
+F 0 "#PWR210" H 9400 3200 50  0001 C CNN
+F 1 "GND" H 9400 3300 50  0000 C CNN
+F 2 "" H 9400 3450 60  0000 C CNN
+F 3 "" H 9400 3450 60  0000 C CNN
+	1    9400 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9400 3450 9250 3450
+$Comp
+L GND #PWR206
+U 1 1 55D400F7
+P 7700 3450
+F 0 "#PWR206" H 7700 3200 50  0001 C CNN
+F 1 "GND" H 7700 3300 50  0000 C CNN
+F 2 "" H 7700 3450 60  0000 C CNN
+F 3 "" H 7700 3450 60  0000 C CNN
+	1    7700 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 3450 7850 3450
+Text HLabel 9250 3750 2    60   Input ~ 0
+VBUS
+Text HLabel 9250 4250 2    60   Input ~ 0
+VBUS
+Text HLabel 7850 4250 0    60   Input ~ 0
+VBUS
+Text HLabel 7850 3750 0    60   Input ~ 0
+VBUS
+Text HLabel 7850 4050 0    60   Input ~ 0
+D-
+Text HLabel 7850 3950 0    60   Input ~ 0
+D+
+Text HLabel 9250 4050 2    60   Input ~ 0
+D+
+Text HLabel 9250 3950 2    60   Input ~ 0
+D-
+Text Label 3850 3850 0    60   ~ 0
+CC1
+Text Label 9550 4150 0    60   ~ 0
+CC2
+Wire Wire Line
+	6000 3850 7850 3850
+Text Label 7500 3850 2    60   ~ 0
+CC1
+Wire Wire Line
+	9250 4150 9650 4150
+Text Label 3850 4000 0    60   ~ 0
+CC2
+$Comp
+L GND #PWR208
+U 1 1 55D40FD7
+P 8550 4800
+F 0 "#PWR208" H 8550 4550 50  0001 C CNN
+F 1 "GND" H 8550 4650 50  0000 C CNN
+F 2 "" H 8550 4800 60  0000 C CNN
+F 3 "" H 8550 4800 60  0000 C CNN
+	1    8550 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L TPD4E05U06 U202
+U 1 1 55D49B93
+P 5550 4100
+F 0 "U202" H 5550 4450 60  0000 C CNN
+F 1 "TPD4E05U06" H 5550 3750 60  0000 C CNN
+F 2 "Mrk Industries:PSON-10_2.5mm_x_1mm" H 5550 3800 60  0001 C CNN
+F 3 "" H 5550 3800 60  0000 C CNN
+F 4 "TPD4E05U06DQAR" H 5650 4550 60  0001 C CNN "mfg#"
+	1    5550 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 4000 4250 3950
+Wire Wire Line
+	4250 3950 5100 3950
+Wire Wire Line
+	9650 4150 9650 5200
+Wire Wire Line
+	9650 5200 7150 5200
+Wire Wire Line
+	7150 5200 7150 3950
+Wire Wire Line
+	7150 3950 6000 3950
+$Comp
+L GND #PWR204
+U 1 1 55D49EC3
+P 4900 4100
+F 0 "#PWR204" H 4900 3850 50  0001 C CNN
+F 1 "GND" H 4900 3950 50  0000 C CNN
+F 2 "" H 4900 4100 60  0000 C CNN
+F 3 "" H 4900 4100 60  0000 C CNN
+	1    4900 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 4100 5100 4100
+$Comp
+L GND #PWR205
+U 1 1 55D49F33
+P 6400 4100
+F 0 "#PWR205" H 6400 3850 50  0001 C CNN
+F 1 "GND" H 6400 3950 50  0000 C CNN
+F 2 "" H 6400 4100 60  0000 C CNN
+F 3 "" H 6400 4100 60  0000 C CNN
+	1    6400 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 4100 6000 4100
+Text HLabel 4450 4250 0    60   Input ~ 0
+D+
+Wire Wire Line
+	5100 4250 4450 4250
+Text HLabel 4450 4350 0    60   Input ~ 0
+D-
+Wire Wire Line
+	4450 4350 5100 4350
+Text HLabel 6000 4250 2    60   Input ~ 0
+D+
+Text HLabel 6000 4350 2    60   Input ~ 0
+D-
+Text Notes 5250 4650 0    40   ~ 0
+IEC 61000-4-2 Level 4\nESD Protection
+$EndSCHEMATC
